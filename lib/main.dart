@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import './Inbox.dart';
+import './Outbox.dart';
+import './Draft.dart';
 
-void main() {
-  runApp(Sms101());
-}
+void main() => runApp(Sms101());
+
 
 class Sms101 extends StatelessWidget {
   @override
@@ -23,13 +25,15 @@ class Sms101 extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              Icon(Icons.directions_car),
-              Icon(Icons.directions_transit),
-              Icon(Icons.directions_bike),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+              Inbox(),
+              Outbox(),
+              Draft(),
+                          ],
+                        ),
+                      ),
+                    ),
+                  );
+                }
+              }
+              
+  
